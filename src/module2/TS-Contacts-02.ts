@@ -1,20 +1,9 @@
-// type User = unknown;
+import { User } from "./TS-Contacts-01";
 
+type Admin = {
+    name: string;
+    age: number;
+    role: string;
+}
 
-// type Admin = {
-//   name: string;
-//   age: number;
-//   role: string;
-// }
-
-// type Person = unknown;
-
-// const persons: Person[] = [
-//   //...
-// ];
-
-// const logPerson = (user: User) => {
-//   console.log(`${user.name}, ${user.age}`);
-// };
-
-// persons.forEach(logPerson);
+export type Person = User | Admin;
