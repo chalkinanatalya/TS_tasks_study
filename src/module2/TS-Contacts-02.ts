@@ -1,9 +1,14 @@
-import { User } from "./TS-Contacts-01";
 
-type Admin = {
+interface User {
+    name: string,
+    age: number,
+    group: string
+  }
+
+export interface Admin {
     name: string;
     age: number;
     role: string;
 }
 
-export type Person = User | Admin;
+export type Person =  User | Admin;

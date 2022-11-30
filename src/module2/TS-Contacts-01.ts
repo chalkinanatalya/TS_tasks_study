@@ -1,12 +1,6 @@
 import { Person } from './TS-Contacts-02';
 
-export type User = {
-  name: string,
-  age: number,
-  group: string
-}
-
-const persons: Person[] = [
+export const persons: Person[] = [
   {
     name: 'Иван Петров',
     age: 27,
@@ -43,12 +37,3 @@ const persons: Person[] = [
     role: 'Administrator',
   }
 ];
-
-const logPerson = (user: Person): void => {
-  if (user.hasOwnProperty('group')) {
-    console.log(`${user.name}, ${user.age}`);
-  }
-}
-
-console.log('Users: ');
-persons.forEach(logPerson);
