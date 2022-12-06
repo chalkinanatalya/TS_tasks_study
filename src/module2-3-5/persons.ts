@@ -30,3 +30,20 @@ filterUsers(
     age: 24
   }
 ).forEach(logPerson);
+
+const filterPersons = (persons: Person[], criteria: { [key in keyof Person]?: string | number }): Person[] =>
+  persons.filter((person) => {
+    const criteriaKeys = Object.keys(criteria) as (keyof Person)[];
+    return criteriaKeys.every((fieldName) => person[fieldName] === criteria[fieldName]);
+  });
+
+
+console.log('Persons of age 24:');
+
+
+filterPersons(
+  persons,
+  {
+    age: 24
+  }
+).forEach(logPerson);
