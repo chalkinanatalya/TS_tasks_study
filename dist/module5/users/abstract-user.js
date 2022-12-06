@@ -18,5 +18,16 @@ class Users {
     get(id) {
         return this._userList.find(user => user.id === id) ?? null;
     }
+    // Добавьте метод sorted который возвращает отсортированный список userList
+    // Метод принимает один параметр, тип сортировки, по возрастанию или по убыванию, по умолчанию значение по возрастанию
+    sorted(sortType = 'up') {
+        let userList = [];
+        sortType === 'up'
+            ? userList = this._userList.sort((num1, num2) => num1.id - num2.id)
+            : sortType === 'down'
+                ? userList = this._userList.sort((num1, num2) => num2.id - num1.id)
+                : false;
+        return userList;
+    }
 }
 exports.Users = Users;
