@@ -20,8 +20,7 @@ export abstract class Users<T extends UserInterface> {
         return this._userList.find(user => user.id === id) ?? null;
     }
 
-    // Добавьте метод sorted который возвращает отсортированный список userList
-    // Метод принимает один параметр, тип сортировки, по возрастанию или по убыванию, по умолчанию значение по возрастанию
+
     public sorted(sortType = 'up'): T[] {
         let userList: T[] = [];
         sortType === 'up'

@@ -13,4 +13,3 @@ export interface Admin {
 }
 
 export type Person = User | Admin;
-
