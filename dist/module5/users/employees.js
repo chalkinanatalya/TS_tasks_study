@@ -43,3 +43,4 @@ console.log('get employer: ', employees.get(5));
 console.log('remove employer: ', employees.remove(3));
 console.log('remove employer: ', employees.remove(6));
 console.log('employees: ', employees);
+console.log('sort employees: ', employees.sorted('down'));

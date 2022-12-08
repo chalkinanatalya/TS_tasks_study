@@ -60,3 +60,6 @@ console.log('get student: ', students.get(5));
 console.log('remove student: ', students.remove(3));
 console.log('remove student: ', students.remove(6));
 console.log('students: ', students);
+
+console.log('sort students: ', students.sorted('down'));
+
