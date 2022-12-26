@@ -20,3 +20,11 @@ console.log('Users of age 24:');
 filterUsers(data_store_1.persons, {
     age: 24
 }).forEach(logPerson);
+const filterPersons = (persons, criteria) => persons.filter((person) => {
+    const criteriaKeys = Object.keys(criteria);
+    return criteriaKeys.every((fieldName) => person[fieldName] === criteria[fieldName]);
+});
+console.log('Persons of age 24:');
+filterPersons(data_store_1.persons, {
+    age: 24
+}).forEach(logPerson);
